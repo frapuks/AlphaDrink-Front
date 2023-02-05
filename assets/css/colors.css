@@ -1,0 +1,11 @@
+:root {
+    --colorBg : #253f66;
+    --colorLogo : #bbdaff;
+    --colorValid : #3742fa;
+    --colorCancel : #747474;
+    --colorDelete : #ff0000;
+    --colorActiv : #74ea58;
+    --colorInactiv : #efefef;
+    --colorFont : #202023;
+    --font : 'Viga', sans-serif;
+}

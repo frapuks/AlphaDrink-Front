@@ -1,0 +1,172 @@
+:root {
+    --colorBg : #253f66;
+    --colorLogo : #bbdaff;
+    --colorValid : #3742fa;
+    --colorCancel : #747474;
+    --colorDelete : #ff0000;
+    --colorActiv : #74ea58;
+    --colorInactiv : #efefef;
+    --colorFont : #202023;
+    --font : 'Viga', sans-serif;
+}
+
+/** ARCHITECTURE */
+body {
+    font-family: var(--font);
+    color: var(--colorFont);
+}
+
+header {
+    height: 20vh;
+    background-color: var(--colorBg);
+}
+
+main {
+    min-height: 60vh;
+    font-size: 1.3rem;
+    padding: 0 1em;
+}
+
+footer {
+    height: 20vh;
+    background-color: var(--colorBg);
+}
+
+.flex--start {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+}
+.flex--center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5em;
+}
+.flex--between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.5em;
+}
+
+.hidden {
+    display: none;
+}
+
+.noScroll{
+    overflow: hidden;
+}
+
+
+/** HEADER  */
+
+
+/** MAIN */
+.main__section{
+    border-bottom: 1px solid var(--colorFont);
+    padding: 0.5em;
+}
+
+h2 {
+    text-align: center;
+    margin: 0.5em;
+    text-transform: uppercase;
+}
+
+.drink__firstLine {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1rem;
+    margin: 1em 0 0.2em;
+}
+
+.drink__details{
+    font-size: 0.5em;
+    margin-left: 1em;
+    font-style: italic;
+}
+
+.drink__rate{
+    color: var(--colorBg);
+    font-size: 1.2rem;
+}
+
+/** MODAL */
+
+.modal__element {
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    left: 5%;
+    bottom: 5%;
+    background-color: #fff;
+    box-shadow: 0 0 15px var(--colorFont);
+    padding: 0.5em;
+    border-radius: 5px;
+    overflow: auto;
+}
+
+.modal__background{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #20202350;
+}
+
+.modal__infos{
+    font-size: 1rem;
+    margin: 1em 0;
+}
+
+.modal__close{
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    border: none;
+    background: none;
+    font-size: 1.5rem;
+}
+
+.review{
+    margin-bottom: 1em;
+}
+
+.review__infos{
+    font-size: 0.8rem;
+    margin-bottom: 0.5em;
+}
+
+.review__name{
+    font-weight: bold;
+}
+
+.review__date{
+    font-style: italic;
+}
+
+.review__content{
+    background-color: var(--colorBg);
+    color: #fff;
+    padding: 1.5em;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-style: italic;
+    line-height: 1.5rem;
+}
+
+.review__form{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+
+
+/** FOOTER */
+.footer__text {
+    text-decoration: underline;
+    font-size: 0.8em;
+}

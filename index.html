@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alpha Drink</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="./assets/css/reset.css">
+    <link rel="stylesheet" href="./assets/css/colors.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/components.css">
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Viga&display=swap" rel="stylesheet">
+    <!-- JS -->
+    <script src="./assets/js/home.js" defer></script>
+</head>
+<body>
+
+    <header class="flex--center">
+        <a href="/">
+            <img src="./assets/img/logo.svg" alt="Logo">
+        </a>
+    </header>
+
+    <main>
+        <section class="main__section flex--center">
+            <p>Alcool</p>
+            <div class="toggle__bg toggle--activ">
+                <div class="toggle__circle toggle__circle--activ"></div>
+            </div>
+        </section>
+        <section class="main__section flex--center">
+            <form action="" class="flex--center">
+                <input type="text" class="input input--text" placeholder="Tapez votre recherche" name="search">
+                <button class="button button--valid">Search</button>
+            </form>
+        </section>
+
+        <template id="categorieTemplate">
+            <section class="main__section">
+                <h2>CATEGORIE</h2>
+                <div class="drinkList"></div>
+            </section>
+        </template>
+
+        <template id="drinkTemplate">
+            <div class="drink">
+                <a href="#modal" class="drink__firstLine">
+                    <span class="drink__name">NAME</span>
+                    <span class="drink__rate"></span>
+                </a>
+                <div class="drink__details">
+                    <div class="drink__maker">fabricant</div>
+                    <p class="drink__infos">infos sur la boisson</p>
+                </div>
+            </div>
+        </template>
+
+        <div class="modal hidden">
+            <div class="modal__background"></div>
+            <div class="modal__element">
+                <button class="modal__close">X</button>
+                <section class="main__section">
+                    <h2>NAME</h2>
+                    <div>
+                        <div class="modal__infos">Note moyenne : ⭐⭐⭐⭐⭐</div>
+                        <div class="modal__infos flex--start">
+                            <div>Alcool</div>
+                            <div class="toggle__bg toggle--activ">
+                                <div class="toggle__circle toggle__circle--activ"></div>
+                            </div>
+                        </div>
+                        <div class="modal__infos flex--start">
+                            <div>Disponible</div>
+                            <div class="toggle__bg toggle--activ">
+                                <div class="toggle__circle toggle__circle--activ"></div>
+                            </div>
+                        </div>
+                        <div class="modal__infos">Catégorie : </div>
+                        <div class="modal__infos">Fabricant : </div>
+                        <p class="modal__infos">Infos : </p>
+                    </div>
+                </section>
+                <section class="main__section">
+                    <h2>COMMENTAIRES</h2>
+                    <div class="reviewlist">
+                        <a href="/" class="flex--center modal__infos">
+                            <button class="button--little button--valid">+</button>
+                            <span >Ajouter un commentaire</span>
+                        </a>
+                        <div class="review">
+                            <div class="review__infos flex--between">
+                                <div>Par <span class="review__name">François</span> <span class="review__date">13/01/2023</span></div>
+                                <div>⭐⭐⭐⭐⭐</div>
+                            </div>
+                            <p class="review__content">“ Contenu du commentaire qui peut être sur plusieurs lignes “</p>
+                        </div>
+                        <div class="review">
+                            <div class="review__infos flex--between">
+                                <div>Par <span class="review__name">François</span> <span class="review__date">13/01/2023</span></div>
+                                <div>⭐⭐⭐⭐⭐</div>
+                            </div>
+                            <p class="review__content">“ Contenu du commentaire qui peut être sur plusieurs lignes “</p>
+                        </div>
+                        <div class="review">
+                            <div class="review__infos flex--between">
+                                <div>Par <span class="review__name">François</span> <span class="review__date">13/01/2023</span></div>
+                                <div>⭐⭐⭐⭐⭐</div>
+                            </div>
+                            <p class="review__content">“ Contenu du commentaire qui peut être sur plusieurs lignes “</p>
+                        </div>
+                    </div>
+                </section>
+                <section class="main__section">
+                    <form action="" class="review__form">
+                        <div>
+                            <label for="name">Nom : </label>
+                            <input class="input input--text" type="text" name="name" id="name" placeholder="Votre nom">
+                        </div>
+                        <div>
+                            <label for="content">Commentaire : </label>
+                            <textarea class="input textarea" name="content" id="content" cols="30" rows="10" placeholder="Votre commentaire"></textarea>
+                        </div>
+                        <div>
+                            <label for="rate">Note : </label>
+                            <input type="range" min="1" max="5">
+                        </div>
+                        <div class="flex--center">
+                            <button class="button button--valid">Valider</button>
+                            <button class="button button--cancel">Annuler</button>
+                        </div>
+                    </form>
+                </section>
+            </div>
+        </div>
+
+
+    </main>
+
+    <footer class="flex--center">
+        <a href="https://github.com/frapuks" target="_blank"><img src="./assets/img/github.svg" alt="github"></a>
+        <a href="#" class="footer__text">Frapuks - 2023</a>
+        <a href="https://www.linkedin.com/in/francois-grunert/" target="_blank"><img src="./assets/img/linkedin.svg" alt="linkedin"></a>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,89 @@
+:root {
+    --colorBg : #253f66;
+    --colorLogo : #bbdaff;
+    --colorValid : #3742fa;
+    --colorCancel : #747474;
+    --colorDelete : #ff0000;
+    --colorActiv : #74ea58;
+    --colorInactiv : #efefef;
+    --colorFont : #202023;
+    --font : 'Viga', sans-serif;
+}
+/** TOGGLES */
+.toggle__bg {
+    position: relative;
+    width: 3em;
+    height: 1.4em;
+    border-radius: 20px;
+}
+
+.toggle--activ {
+    background-color: var(--colorActiv);
+}
+.toggle--inactiv {
+    background-color: var(--colorInactiv);
+}
+
+.toggle__circle {
+    background-color: #fff;
+    width: 1em;
+    height: 1em;
+    border-radius: 20px;
+    position: absolute;
+    top: 0.2em;
+    box-shadow: 0 0 10px var(--colorCancel);
+}
+
+.toggle__circle--activ {
+    right: 0.2em;
+}
+.toggle__circle--inactiv {
+    left: 0.2em;
+}
+
+
+/** INPUT */
+.input {
+    background-color: var(--colorInactiv);
+    border : 2px solid var(--colorLogo);
+    border-radius: 5px;
+    font-weight: bold;
+}
+.input::placeholder{
+    color: var(--colorCancel);
+}
+.input:focus{
+    border : 2px solid var(--colorValid);
+    outline: none;
+}
+.input--text{
+    height: 3.1em;
+    padding-left: 0.5em;
+}
+.textarea{
+    width: calc(100% - 2em);
+    padding: 1em;
+}
+
+/** BUTTONS */
+.button{
+    border-radius: 5px;
+    border: none;
+    height: 3.5em;
+    width: 8em;
+}
+
+.button--little {
+    border-radius: 5px;
+    border: none;
+    padding: 0.8em 1em;
+}
+
+.button--valid{
+    color: #fff;
+    background-color: var(--colorValid);
+}
+.button--cancel{
+    color: #fff;
+    background-color: var(--colorCancel);
+}
